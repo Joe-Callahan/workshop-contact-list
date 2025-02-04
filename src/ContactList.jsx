@@ -1,15 +1,28 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 const ContactList = () => {
+  const [allContacts, setAllContacts] = useState([]);
 
   useEffect(() => {
     const getContacts = async () => {
       const response = await fetch (`https://fsa-jsonplaceholder-69b5c48f1259.herokuapp.com/users`);
-      console.log(response);
+      const retrievedContacts = await response.json();
+      setAllContacts(retrievedContacts);
     }
     getContacts();
-  })
-  return <h1>Contact List</h1>;
+  }, []);
+
+  return (
+    <>
+    <ul>
+      {
+        allContacts.map((singleContact) => {
+          return <li key={singleContact.id}>{ singleContact.name }</li>;
+        })
+      }
+    </ul>
+    </>
+  )
 }
 
 export default ContactList
