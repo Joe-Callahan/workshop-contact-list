@@ -1,0 +1,47 @@
+body {
+  background-color: blue;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  background-color: white;
+  padding: 3vh;
+  border-radius: 10%;
+  font-family: fantasy;
+  border-color: green;
+  border-style: outset;
+  border-width: 1vh;
+}
+
+ul {
+  background-color: white;
+  padding: 3vh;
+  border-radius: 10%;
+  font-family: fantasy;
+  border-color: green;
+  border-style: outset;
+  border-width: 1vh;
+}
+
+section {
+  background-color: white;
+  padding: 3vh;
+  border-radius: 10%;
+  font-family: fantasy;
+  border-color: green;
+  border-style: outset;
+  border-width: 1vh;
+}
+
+button {
+  margin: 2vh;
+  padding: 1vh;
+  background-color: white;
+  font-family: fantasy;
+}
+

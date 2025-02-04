@@ -1,6 +1,7 @@
 const ContactDetails = (props) => {
   return (
     <>
+    <section>
       <h2>{props.selectedContact.name}</h2>
       <p>Phone: {props.selectedContact.phone}</p>
       <p>Email: {props.selectedContact.email}</p>
@@ -8,6 +9,7 @@ const ContactDetails = (props) => {
         {props.selectedContact.address.suite}</p>
       <p>{props.selectedContact.address.city}{" "}
       {props.selectedContact.address.zipcode}</p>
+    </section>
       <button onClick={() => {props.setSelectedContact({}) }}>Back</button>
     </>
   )
