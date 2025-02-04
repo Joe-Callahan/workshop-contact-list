@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const ContactList = () => {
+const ContactList = (props) => {
   const [allContacts, setAllContacts] = useState([]);
 
   useEffect(() => {
@@ -13,15 +13,20 @@ const ContactList = () => {
   }, []);
 
   return (
-    <>
     <ul>
       {
         allContacts.map((singleContact) => {
-          return <li key={singleContact.id}>{ singleContact.name }</li>;
+          return (
+            <li
+              key={singleContact.id}
+              onClick={() => {props.setSelectedContact(singleContact)}}
+            >
+              {singleContact.name}
+            </li>
+          )
         })
       }
     </ul>
-    </>
   )
 }
 
